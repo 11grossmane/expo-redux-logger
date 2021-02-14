@@ -1,14 +1,14 @@
 # Redux Logger for Expo
 
--   super simple redux logger specifically designed for Expo projects
--   the main advantage of using this logger over other redux loggers, is it allows you to separate your redux logs from your other logs
+- super simple redux logger specifically designed for Expo projects
+- the main advantage of using this logger over other redux loggers, is it allows you to separate your redux logs from your other logs
 
 ![screenshot](https://github.com/11grossmane/expo-redux-logger/blob/master/sc.png?raw=true)
 
 ## Why Use this Package?
 
--   separate your redux logs from other logs when remote debugging
--   prevent your console from being overrun with redux logs!
+- separate your redux logs from other logs when remote debugging
+- prevent your console from being overrun with redux logs!
 
 ## Install
 
@@ -19,18 +19,18 @@
 First, enable remote debugging when you are running your Expo project. If you don't know how see 'How To Enable Remote Debugging With Chrome' section below. Now, when your redux state changes, you will see those logs in the remote console, but your terminal will only display your non-redux console.log statements. This makes it much easier to find logs you are looking for without having to entirely remove logging middleware.
 
 ```javascript
-import { applyMiddleware, createStore } from 'redux'
-import { expoLogger } from 'expo-redux-logger'
+import { applyMiddleware, createStore } from "redux";
+import { expoLogger } from "expo-redux-logger";
 
-const store = createStore(reducer, applyMiddleware(expoLogger))
+const store = createStore(reducer, applyMiddleware(expoLogger));
 ```
 
 ## Helpful iOS Simulator Shortcuts for mac
 
 This isn't specific to this package, but I thought I would include these shortcuts because sometimes enabling remote debugging causes some strange errors when using expo and you just need to restart it.
 
--   normal restart - cmd+ctrl+z to reveal dev menu, then press Reload
--   if normal restart isn't working - press shitf+ctrl+cmd+h to open app-switcher, swipe up to close expo app, re-open expo app
+- normal restart - cmd+ctrl+z to reveal dev menu, then press Reload
+- if normal restart isn't working - press shitf+ctrl+cmd+h to open app-switcher, swipe up to close expo app, re-open expo app
 
 ## How To Enable Remote Debugging With Chrome
 
