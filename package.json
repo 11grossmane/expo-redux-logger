@@ -1,38 +1,38 @@
 {
-  "name": "expo-redux-logger",
-  "version": "1.0.0",
-  "description": "redux logger for Expo project",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/11grossmane/expo-redux-logger.git"
-  },
-  "main": "./lib/index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run cleanbuild && prettier * --write"
+    "name": "expo-redux-logger",
+    "version": "2.0.0",
+    "description": "redux logger for Expo project",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/11grossmane/expo-redux-logger.git"
+    },
+    "main": "./lib/index.js",
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run cleanbuild && prettier * --write"
+        }
+    },
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "clean": "rm -rf ./lib",
+        "cleanbuild": "npm run clean && npm run build",
+        "pub": "npm run clean && npm install && npm run build && npm publish"
+    },
+    "keywords": [],
+    "author": "11grossmane",
+    "license": "ISC",
+    "dependencies": {
+        "redux": "^4.0.5"
+    },
+    "devDependencies": {
+        "@types/node": "^13.13.42",
+        "@types/redux": "^3.6.0",
+        "@types/typescript": "^2.0.0",
+        "husky": "^4.3.8",
+        "ts-node": "^8.9.0",
+        "typescript": "^3.8.3"
     }
-  },
-  "files": [
-    "lib"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf ./lib",
-    "cleanbuild": "npm run clean && npm run build",
-    "pub": "npm run clean && npm install && npm run build && npm publish"
-  },
-  "keywords": [],
-  "author": "11grossmane",
-  "license": "ISC",
-  "dependencies": {
-    "redux": "^4.0.5"
-  },
-  "devDependencies": {
-    "@types/node": "^13.13.42",
-    "@types/redux": "^3.6.0",
-    "@types/typescript": "^2.0.0",
-    "husky": "^4.3.8",
-    "ts-node": "^8.9.0",
-    "typescript": "^3.8.3"
-  }
 }
